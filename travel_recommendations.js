@@ -2,7 +2,7 @@ let data = {}; //store JSON data
 
 async function loadData() {
     try {
-        const response = await fetch('travel_recommendation_api.json'); // path to your JSON file
+        const response = await fetch('travel_recommendation_api.json'); 
         if (!response.ok) throw new Error('Network response was not ok');
         data = await response.json(); // parse JSON and store it in data
         console.log('Data loaded:', data);
@@ -11,7 +11,7 @@ async function loadData() {
     }
 }
 
-// Call the function to load the data
+
 loadData();
   
 //Intialize constants
@@ -46,11 +46,11 @@ searchBtn.addEventListener('click', () => {
     // Show "No results found" message
         box1.style.display = 'block';
         box1Image.src = '';
-        box1Name.textContent = 'No results found'; // <--- h1 text
-        box1Desc.textContent = ''; // clear h2
-        document.getElementById('rb1h3').textContent = ''; // clear h3 (local time)
+        box1Name.textContent = 'No results found'; 
+        box1Desc.textContent = ''; 
+        document.getElementById('rb1h3').textContent = ''; 
 
-    // Hide second box
+    /
         box2.style.display = 'none';
 
     // Adjust layout
@@ -155,11 +155,11 @@ function displayResults(result1, result2, le_match) {
         if (le_match === 'city') {
             carouselInner.style.height = 'calc(100vh - 80px)';
             staffContainerDiv.style.top = '50%';
-            console.log('✅ City result → height set to calc(100vh - 80px)');
+            console.log('City result → height set to calc(100vh - 80px)');
         } else {
             carouselInner.style.height = '130vh';
             staffContainerDiv.style.top = '80%';
-            console.log('✅ Non-city single result → height set to 130vh');
+            console.log(' Non-city single result → height set to 130vh');
         }
     }
 
