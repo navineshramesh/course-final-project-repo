@@ -2,7 +2,7 @@ let data = {}; //store JSON data
 
 async function loadData() {
     try {
-        const response = await fetch('travel_reccomendations_api.json'); // path to your JSON file
+        const response = await fetch('travel_recommendation_api.json'); // path to your JSON file
         if (!response.ok) throw new Error('Network response was not ok');
         data = await response.json(); // parse JSON and store it in data
         console.log('Data loaded:', data);
